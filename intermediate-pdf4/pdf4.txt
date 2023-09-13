@@ -1,0 +1,29 @@
+
+File handling-
+1.1
+    •	File handling allow the user to perform a lot of actions such as creating or reading, writing and so on.
+        It can works with different files types. Python provides good interface for file handling, 
+        so it will be easy for user to perform one of the actions I mentioned before.
+    •	And why we need this? It allows us to store data that can be accessed by our code and apply one of the actions. It also allows us to treat a file as an object
+    •	Why not use only variables to store data? because the variables are volatile. This is why we need to handle in files.
+1.2
+    •	Built in function called “open”  the code is like this -- open('filename', mode)
+        File name as it. The file of the name
+    Mode – what action we do.
+		‘r’ – read. = open file for reading.
+		‘a’ – open file for appending or create the file if doesn’t exist.
+		‘w’ – write to the file. Also creates the file if not exist
+		‘x’ – create file.
+
+Json 
+    •	Json is short of Java Script Object Notation. 
+        It format for storing data. Json file is more easy to understand because his format.
+        It is often used for data exchange between a server and a web application or between different parts of an application.
+
+    In Python, you use the json module to work with JSON files. 
+    The main functions we  use are:
+
+        json.load(file): Reads a JSON file and parses it into a Python dictionary or list.
+        json.dump(data, file): Writes a Python dictionary or list as a JSON file.
+        json.loads(json_string): Parses a JSON string and converts it into a Python dictionary or list.
+        json.dumps(data): Converts a Python dictionary or list into a JSON string.   	
