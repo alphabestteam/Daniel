@@ -2,7 +2,6 @@ LIFE_HEAL = 0.20
 DAMAGE = 0.5
 NECC_COINS = 1.5
 
-
 def prec_calculate(num: int, precent: int):
     result = (num // 100) * precent
     return result

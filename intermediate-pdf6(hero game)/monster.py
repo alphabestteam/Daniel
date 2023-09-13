@@ -1,7 +1,6 @@
 
 import random
 
-
 class Monster:
 
     def __init__(self, name, hero: object) -> None:

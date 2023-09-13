@@ -1,7 +1,6 @@
 from hero import Hero
 from monster import Monster
 
-
 def action_choose():
     action = input(
         "Enter the required action:\n1- Attack \n2- Defend \n3- Heal \n4- LevelUp \n")
