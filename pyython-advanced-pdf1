@@ -1,0 +1,19 @@
+
+
+1.  magic function - for example the operator '+' can only add arguments but not object. 
+    behind the operator + there is built in class __add__ that makes the adding.
+    but this classes are changeable. So if i want to modify the class that he will add also object i can do it.
+    another 3 examples - 
+    1.'__abs__' makes absolute values.
+    2.'__pow__' Takes a number and raises it to the power of a given number to the function
+    3.'__eq__'  equal its behind the operator '=' 
+2.
+    the str method return string that human can read. if we wouldn't override str, python will use repr function which return unreadable string.
+3.
+    it will check if two variables point to the same location in the memory
+
+4. 
+    overloading operator - change the behavior of magic function. if the regular functionality of '+' operator is to add two numbers, we can overloading this method and give it extra meaning.
+
+5. i wrote the errors inside main class.
+
