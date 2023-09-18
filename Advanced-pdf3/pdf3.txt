@@ -1,0 +1,60 @@
+Decorators-
+1.
+    sometimes we would like to preform some actions and wrap them with actions which will preform before and after our action.
+    for example initialize variable when function start and finish and reset them.
+    To preform that we have the  Decorators.
+2.
+    how its works? when you place a decorator in front of a function, you’re actually saying you want to pass that function to another function
+    def my_decorator(func):
+    def wrapper():
+        print("Something is happening before the function is called.")
+        func()
+        print("Something is happening after the function is called.")
+    return wrapper
+
+@my_decorator
+def say_hello():
+    print("Hello!")
+
+say_hello()
+
+whats happening here its, its start from my_decorator and pass the say_hello into it. inside the function it preform 
+some prints action before and after the function
+3. 
+    function pointer - variable that contain function. whats we get from that, the ability to pass function to function through variable
+4.
+    Using *args and **kwargs when creating decorators in Python allows you to create more flexible decorators
+    that can be applied to functions with different argument types
+    for example, if we want to pass to the function, functions and parameters,
+5.  
+    when we use getters we use @property.
+7.
+   A class decorator in Python is a special kind of decorator that uses a class to modify or enhance the behavior of functions or methods. 
+   It's like wrapping a gift with a customizable wrapper
+8.
+    Iterators - every object that iterable. which mean we can go through it with loops. 
+    (list,dict,tuple,string...)
+
+9. del keyword use for deleting object. 
+for example:
+class MyClass:
+  name = "John"
+
+del MyClass
+
+print(MyClass)
+9.
+    by adding __iter__ to function to object and classes we can make them iterables.
+    we need to use also in __next__ which move the next object we'll go through.
+
+10.
+    generators - it like regular function but the return value can be  a few values that iterables. it called yield
+
+11. 
+    why do we need to use them? 1. save memory place 2. return couple of variables.
+12.
+    we can store the yield into variable and use it as iterator write __next__ function and also can store in it and work on it 
+    head
+
+
+
