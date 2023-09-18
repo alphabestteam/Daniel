@@ -1,0 +1,35 @@
+1.
+    threads - thread its like small parallel process. 
+    usually when we run program, its run by one process which means nothing can happen parallel. 
+    And this is what thread allows us to do.
+
+    we use them to achieve concurrency, responsiveness, and efficiency in various applications.
+    for example in web server, thread can handle a couple of client request simultaneously
+
+2.  import threading
+
+3. Requests - library in Python provides a convenient way to perform network tasks, particularly HTTP requests
+    its preferred over using sockets directly because it offers a simpler and more user-friendly interface,
+     abstracting away many low-level networking details
+
+4. sockets - way to communicate between 2 components in the web. 
+    we use it for example when we enter google, the browser open channel to communicate with google's socket which listen to 
+    socket requests.
+
+    we would'nt always use socket directly, for HTTP request we can simply use module that used for that.
+
+    to create the channel between server and client we have few steps.
+    
+    Server side: 1- create socket. 2- bind for address and port. 3- accept for connection. 4- confirmation for getting some data.
+    5- sendall.return some data
+
+    client side - 1- create socket 2- connect to server socket in the matching port and address 3 - send data 
+
+    In the constructor of the socket we get 2 parms. 
+    1 - address family which means the family of the address the socket need to communicate. for ex. ipv6 or 4
+    2- connection type. for example tcp or udp.
+
+5. Virtual environments - if we want to run couple of versions, without vEnv we cannot do it.
+    vEnv allow us to run on virtual environments the version with all the necessary modules
+
+    i tried to run on env, but it didnt work because we dont have all the modules 
