@@ -1,0 +1,24 @@
+1.
+    NoSQL databases are non-tabular databases and store data differently than relational tables
+    for example to the diff between sql and noSql, if we want to add person's name to noSql we use key and value to perform this.
+
+2. 
+    advantges - 1. Enable easy updates to schema and fields
+                2. databases are designed to handle unstructured or semi-structured data, which means that they can accommodate dynamic changes to the data model
+                3.friendly for agile development
+    disadvatges
+                1.There is no reliable standard for NoSQL yet which can cause to two databases look differently.
+                2.mongo doesnt have access to backup data.
+                3. the sotreage document is large because some databases are store the data in json files.
+
+3.
+    database - built from multiple collections.
+    collections - schemaless and contains documents
+    document - mongo stored data in BSON documents.BSON can store more data types than json. 
+    inside the document, key and values are stored.
+    every documents, has unique id.
+4.
+    id helps to manage documents by providing an easy way to track them by their id. Also can avoid duplicate keys.
+    if we wouldnt defined the id, it will create auto id increment.
+            
+
