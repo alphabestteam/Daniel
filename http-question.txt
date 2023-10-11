@@ -1,0 +1,83 @@
+1. 
+The internet wngineering Task Force. the body that defines standard operating internet protocols such as TCP  and IP
+2.
+communication protocol is bunch of rules which defined the requests and data receiving in communication system.
+including viewing,validation, error fix, and all the thing for transfer data in channel communication
+3.
+refers to a series of documents and standards used to define various aspects of the Internet, 
+including protocols and technologies
+4.
+Hypertext Transfer Protocol -Retrieving web pages and resources from web servers.
+                            ending and receiving data between clients and servers.
+                            Addressing web resources using URLs.
+                            Enabling hyperlinks and web navigation.
+5.
+ HTTP-  is a standard protocol for transmitting data over the internet. 
+ It operates at the application layer of the OSI model.
+ It does not provide encryption by default
+ TCP provides reliable data delivery but lacks encryption.
+ SSL/TLS: HTTP does not use SSL (Secure Sockets Layer) or TLS (Transport Layer Security) for encryption and authentication
+HTTPS-
+HTTPS is a secure version of HTTP
+It employs SSL or TLS to encrypt data transmitted between the client and server. 
+HTTPS also uses TCP as the transport layer protocol to ensure reliable data delivery.
+HTTPS uses SSL or TLS protocols to provide security. SSL was the earlier protocol, and TLS is its modern successor
+6.
+request-response model. It defines how data is exchanged between a client (usually a web browser) and a web server
+The HTTP model involves two primary entities: the client and the server. The client is typically a web browser or any other application that wants to retrieve web resources, 
+while the server hosts those resources.
+ sending requests to a server for web resources. 
+ The server responds with the requested data. It's a stateless protocol with methods  GET, POST..
+  status codes  200 OK, 404 Not Found.... headers,and URLs to identify and transfer web resources.
+  7.
+  The user-agent is a string that identifies the client software and device making a web request.
+  A web server is a software or hardware system that stores and serves web content in response to client requests.
+  Proxies are intermediary servers that can be used for various purposes, including improving performance, enhancing security, and providing anonymity for clients or handling requests on behalf of web servers.
+  8.
+  proxy provide security layer for our computer. in the web its like web filter. 
+  its works - the proxy its like mediator in the middle of the communication. 
+  regularly, the communication perform directly between the client and the server. 
+  when we use proxy the communication pass through the proxy.
+  9.
+    statless protocol does not require teh server to retain the server information or session details.
+    stateful protocol, require serer to save the status and session information.
+    in stateful protocol if the server didn't response to the client the client resend the request again.
+10. 
+    no http is a stateless protocol
+11. 
+    1 - direct browser to url 
+    2 - browser looks up IP - through DNS (domain name server) which convert the url to actual IP
+    3 - browser sends HTTP request
+        GET /index.html HTTP/1.1
+        Host: www.example.com
+    4 - host send back HTTP response - HTTP/1.1 200 OK
+    5 - The browser renders the response
+12. 
+    request headers contain more information about the resource to be fetched, or abouot the client requesting the resource.
+13.
+    cookiex are small pieces of thext sent to you browser by a website you visit. its help the web to remember inf about you visit 
+    which make it get the web when you visit it again
+14.
+    request line
+    headers
+    message body
+15.
+    status line (200,404 and more)
+    Http headers
+    message body
+16.
+    
+    HTTP2 - use TCP, Often encounters head-of-line blocking issues for multiplexed streams due to limitations in byte stream abstraction
+            Fewer error handling capabilities, TLS is optional, Does not support connection migration.
+    HTTP3 - QUIC, which operates over UDP, Offers multiplexing without head-of-line blocking due to UDP’s out-of-order delivery,
+            Enhanced error handling capabilities due to QUIC, 	TLS is embedded in QUIC and by default in HTTP/3, Supports seamless connection migration via connection IDs (CIDs) (explained below)
+
+
+
+
+
+
+
+
+
+
