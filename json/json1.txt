@@ -1,0 +1,115 @@
+1.	JSON is a lightweight format for storing and transporting data.
+2.	Object contain multiple key and values. Stored inside curly braces
+3.	Hash map, dictionary, tuple
+4.	Array, list, collection
+5.	 String, number, bool, object, null
+6.	String, number, bool, object, null, list
+7.	Literals and fixed keywords doesn’t need quotes
+8.	There is no min size to string length
+9.	Keys within the same JSON object must be unique.
+Usually keys is the definition and the value as its name, the value of the definition
+10.	It actually supported
+11.	Yup
+12.	Yup
+13.	Yup
+14.	
+{
+  "name": "John",
+  "age": 30,
+  "isStudent": false,
+  "address": {
+    "street": "123 Main St",
+    "city": "New York"
+  },
+15.	To store data easily and readabllity
+16.	.json
+17.	Every object inside curly braces. And each attribute inside separated by ,
+18.	{
+ "fruits": ["apple", "banana", "cherry"]
+}
+19.	{
+20.	"employees":[
+  {"firstName":"John", "lastName":"Doe"},
+  {"firstName":"Anna", "lastName":"Smith"},
+  {"firstName":"Peter", "lastName":"Jones"}
+]
+21.	loads() takes in a string and returns a json object. json. dumps() takes in a json object and returns a string.
+22.	markup language used to structure and store data. It has been criticized for being verbose, complex, and less readable compared to alternatives like JSON
+23.	json doesn’t use end tag. Json shorter. Json quicker to read and write. Json can use arrays. And we hate xml.
+24.	 When you need to send and receive structured data between a client and server
+You need a format to store and serialize structured data
+JSON can be used when different software systems or components need to exchange data
+
+25.	
+{
+  "people": [
+    {
+      "name": "dan",
+      "age": 30,
+      "cars": [
+        {
+          "price": 25000,
+          "year": 2020,
+          "hp": 180,
+          "maxSpeed": 200,
+          "Cylinders": 4
+        },
+        {
+          "price": 35000,
+          "year": 2018,
+          "hp": 220,
+          "maxSpeed": 260,
+          "Cylinders": 6
+        }
+      ]
+    },
+    {
+      "name": "Ari",
+      "age": 28,
+      "cars": [
+        {
+          "price": 22000,
+          "year": 2019,
+          "hp": 160,
+          "maxSpeed": 130,
+          "Cylinders": 4
+        }
+      ]
+    }
+  ],
+  "cities": [
+    {
+      "name": "New York",
+      "timeZone": "Eastern Standard Time",
+      "zipCode": "10001",
+      "population": 8398748,
+      "yearEstablished": 1624,
+      "mayor": {
+        "name": "Jane Smith",
+        "age": 50,
+        "yearElected": 2020,
+        "yearlySalary": 150000
+      }
+    },
+    {
+      "name": "Los Angeles",
+      "timeZone": "Pacific Standard Time",
+      "zipCode": "90001",
+      "population": 3990456,
+      "yearEstablished": 1781,
+      "mayor": {
+        "name": "John Johnson",
+        "age": 45,
+        "yearElected": 2018,
+        "yearlySalary": 140000
+      }
+    }
+  ]
+}
+26.	We can use parse to parse the json string into js object. And than use codenames[0] accesses the first element of the docenames which required in the question 
+
+	
+
+
+
+
