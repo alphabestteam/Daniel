@@ -1,0 +1,85 @@
+1. 
+    file typically defines the data models used in the application
+    part of the backend responsible for defining the database schema and handling data-related operations.
+2. 
+    This file is responsible for defining the views or endpoints that handle incoming HTTP requests
+    part of the backend, as it determines how the application responds to client requests
+3.
+    A file that holds list of urls that our project support. this list, map the url to view function that will handle 
+    the client requests
+    urls.py maps specific URL patterns to the corresponding Django application's urls.py file to handle them.
+4. 
+    To manage and track changes to the database schema over time. 
+    They are essential for database schema version control and data schema updates.
+    makemigrations: This command generates new migration files based on the changes you made to your models.
+    migrate: This command applies the pending migrations to update the database schema.
+5. 
+    The role of a serializer is to convert complex data types, such as Django models, into JSON or other data formats,
+    making it easy to render them into a content type suitable for client consumption
+6.
+    A toolkit built on top of the Django web framework that reduces the amount of code you need to write to create REST interfaces
+7.
+    serializers are custom classes used to transform complex data types like models into native data types
+    model serializers its a shortcut for creating serializers for model instances.
+    it provide simple way to create serializer classes for models.
+8.
+    1- One-To-One Relationship
+    2- One-To-Many Relationship
+    3- Many-To-Many Relatiosnship
+
+    one to one - one record in table is associated with ONLY one record
+    one to many - one record is associated with one or more another records
+    many to many - multiple records associated with multiple records
+
+    example of using one to one - person has only one ID numner. this number can associated with only one person
+    example of using one to many - Author can associated with multiple books. but each book written by one Author
+    example of using many to many - students has multiple courses, courses can handle multiple students
+9. 
+
+    start Django project
+    create new app python manage.py startapp myapp
+    defiine model - by open models.py file and defiine model classes by create python class for each table
+    create migrations by running the following code - python manage.py makemigrations myapp
+    create the corresponding DB - python manage.py migrate
+    register the app - add the app to installes app
+    use model - use the model in views, templates, and DB operations
+    url - define url patterns in urls.py to map views to spedific urls
+    run the dev server - run the server to test and run the app
+10.
+    
+    rout - route to the required endpoint that should handle the post requests
+    request parsing - request data parsed to extract posted info
+    sending responds - sent back to the client in json or xml structured
+11.
+    It's a way to modify the request or response that flows through the pipeline, 
+    or to add additional processing to the pipeline
+    example of use middleware - authentication. middleware can used to check whether incoming requests are accompained by valid authentication
+    tokens or cookies
+    its help for secure and authrized users
+12. 
+    fixture - data files used to store DB with predefined data. 
+    they may contain serialized data usually view as json or xml formats
+     
+    we can use fixture files for - 
+        testing by load test data into DB for unit tests
+        version control - fixture allow you to version control and share data as part of you app codebase
+        fixture also provide demo data for development purpose
+13.     
+    filter() - used to filter results from a queryset nased on defined condition.
+    we can use it when we want specific results.for example if we want books only from specific year, we can use filter.
+14. 
+    managers are Python classes that help interact with database tables
+    They allow you to retrieve, create, update, and delete records in the database.
+
+    objects: This is the default manager that allows you to perform database operations on model instances.
+
+
+
+
+
+
+
+
+
+    
+
