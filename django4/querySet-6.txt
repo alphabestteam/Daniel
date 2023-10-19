@@ -1,0 +1,24 @@
+1.
+    Parent.objects.all().values()    
+2.
+    Parent.objects.filter(job='Google').count() 
+3. 
+    Parent.objects.annotate(max_child_birthdate=Max('kids__date_of_birth')).order_by('-max_child_birthdate').values()
+4.
+    People.objects.filter(name__icontains='i').values()
+5. 
+    from django.db.models import Q
+    People.objects.filter(Q(city='Raanana') | Q(city='Tel Aviv')).values()
+6.
+    import AVG
+    Parent.objects.aggregate(Avg('salary'))
+7.
+    Parent.objects.annotate(kids_count=Count('kids')).values('name','kids_count')
+8. 
+                                count kids per parent                       summarize all the counts
+    Parent.objects.annotate(kids_count=Count('kids')).aggregate(children_count=Sum('kids_count'))
+9.
+    Parent.objects.order_by('salary').values().last()
+
+10.
+    People.objects.annotate(parents_salary=Sum('parents__salary')).filter(parents_salary__gte=50000).values()
