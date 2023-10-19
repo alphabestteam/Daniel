@@ -1,0 +1,7 @@
+1.
+    we cannot regularly limit digits in integer. i added maxValidation function to perform it.
+2.
+    firs, i changed the salary field to integer.
+    after i performed the makemigrations script,
+    than into the new migration file i added function that get into the people(person) class
+    and i went through all the objects and changed from decimal to integer.
