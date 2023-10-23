@@ -1,0 +1,90 @@
+2.
+  change the methods to api view.
+  and parser data using request.data instead of json parser
+  in addition, i changed the response method to Response which contains a couple of fields built in
+3. 
+    its way to include additional information in the URL of an HTTP request.
+    Query parameters are added to the URL after a question mark (?) and are separated by ampersands (&) if there are multiple parameters.
+    we use this when we want to get object according to specific attribute
+4.
+
+    HttpResponse- is used in traditional Django web views and is suited for rendering HTML,
+    plain text, and performing web page rendering and redirection. 
+    It's part of the Django framework.
+
+    Response - is used in Django REST framework (DRF) for building RESTful APIs. 
+    It is designed to handle JSON responses, content negotiation, status codes, and serialization.
+    It's tailored for building API endpoints and is part of the DRF library.
+5. 
+
+    CBVs: Class-based, organized, and reusable. Ideal for complex views and APIs.
+    FBVs: Function-based, simple, and concise. Suitable for quick, simple views.
+6.
+    in fbvs we can add multiple http method.
+    using conditions, the function will know how to refer each of the method. 
+    it will look like this @api_view(['GET', 'POST', 'PUT', 'DELETE'])
+7. 
+    it check whether the object id already exist in the db. if it does exist, it updates it.
+     unless it create new one
+8.
+    If any validation errors occur, the .errors property will contain a dictionary representing the resulting error messages.
+    using serializers.ValidationError we will get the errors
+9. 
+    make validation on the data, and raise exception if not.
+    yes it better way. shorter and more readable
+10. 
+    i have added validator to price field that check whether the price will not be negative
+11. 
+    i added function to view to update price.
+    in the following line we sent data and allow partial updating
+    serializer = BookSerializer(book, data=data, partial=True)
+12. 
+    if we create 2 models that related. so if the depth defined to 1, when we access object in the first model it will show also the second model's object
+13.
+    To add fields that not in the first schema we can add function in the serializer (i gave example of pure profit in the serializer)
+14.
+     read only use for fields that we want to allow django to read but never to change.
+15. 
+    like Q 13, we can use serializerMethodField to make dynamically calculation based on the function we defined in teh serializer
+16. 
+    if we have 2 models that related, and we want to get specific field from second model by call the first model,
+    we can define inside the "father" model's serializer slug field. in the field we define the specific attribute we wanted
+17.
+
+    When you use select_related, it selects all fields in the query as well as important fields on related models. 
+    The query performs a SQL JOIN operation in the database to retrieve data from related models.
+
+    When you use prefetch_related, it performs two separate queries, one for the main model and one for the related model.
+    It then combines the data in Python.
+18.
+    class MessageSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Message
+        fields = '__all__'
+
+    class UserSerializer(serializers.ModelSerializer):
+    messages = MessageSerializer(many=True, read_only=True)
+
+    class Meta:
+        model = User
+        fields = '__all__'
+        depth = 1
+
+        i hope this what you meant to.
+        By setting depth to 1, it tells DRF to include all information about the related Message objects when serializing a User.
+19. 
+    
+    Writable nested serializers in Django Rest Framework (DRF) enable handling of related objects when performing CRUD operations on a parent object.
+    This allows for creating, updating, or deleting both the parent object and its related child objects in a single API request.
+    These serializers simplify the management of complex data structures involving multiple models and relationships.
+    They ensure data integrity and consistency in the API interactions and are a powerful feature in DRF for managing nested models efficiently.
+
+    
+    In Album&Track code, the use of writable nested serializers allows for the creation of albums along with their associated tracks in a single API request
+    it simplifies the handling of complex relationships between albums and tracks, streamlining the data creation process, and maintaining data integrity.
+
+    django-filter-
+    
+    By using "django-filter," you can automatically implement tools for filtering data structures based on parameters sent through the URL.
+    Whn a GET request is made with the appropriate parameters, the library will filter the results accordingly.
+    For example, if you have a data structure of movies, you can define filters that allow you to filter movies by the main actor's name, release year, and more.
