@@ -1,0 +1,35 @@
+1.
+    NGINX is a versatile web server and reverse proxy that excels at traffic management. Three key advantages include:
+    ~ High Performance: NGINX efficiently handles traffic.
+    ~ Load Balancing: It distributes requests across servers for better availability.
+    ~ Scalability: NGINX easily scales to accommodate growing web traffic.
+2.  
+    
+    server {
+        listen       8080;
+        server_name  localhost;
+
+        #charset koi8-r;
+
+        #access_log  logs/host.access.log  main;
+
+3.
+    <!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                background-color: black;
+            }
+
+            h1 {
+                color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            hello world
+        </h1>
+    </body>
+</html>
