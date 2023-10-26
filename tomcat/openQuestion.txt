@@ -1,0 +1,28 @@
+1.
+    web application - is software or hardware that run on/with web server.
+    to understand it better, web server get static websites according to user HTTP request.
+    and to use the functional of website we need web application. for example registeration to system uploading files or make orders on AliExpress
+2.
+    web server as i exapleind before, it responsible to listen to user requests and give static data to the user
+    like Pizza website, through web server you will get html css and js, and you can go through the website but you will cannot perform any 
+    actions.
+3. 
+    1 -  file storage. server can manage access file remotely
+    2 - data security web server provide data security like secure connection HTTP and so on..
+    3 - app hosting web server can run complex internet apps on server side
+
+    1- wide availability, the deployment of them together allow high volume of requests from numerous users.
+    2- scalability for example if we need to handle large number of users, we can scale up the  server resources to accommodate the load
+    3 - Remote Management: Web servers can be managed remotely, providing flexibility and ease of administration.
+4. 
+    a java program class that extends the capabilities of server that host apps. and increase the ability of handle request.
+5.
+    Apache Tomcat is a web container It allows the users to run Servlet and JAVA Server Pages that are based on the web-applications
+    apache can be use as HTTP server
+    
+6.
+    Apache is open-source software, which means it is freely available and can be modified and distributed by anyone
+    apache Tomcat Sever - can handle both static pages and dynamic pages
+
+    Apache Tomcat server is slower compare to Apache web server.
+    It can be used only for hosting JAVA based code.	
