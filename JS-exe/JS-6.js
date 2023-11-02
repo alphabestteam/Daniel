@@ -15,4 +15,4 @@ function evalNumbers(num1, num2, operation) {
 }
 
 evalNumbers(5, 3, '+'); 
-evalNumbers(10, 7, '-'); 
+evalNumbers(10, 8, '-'); 
