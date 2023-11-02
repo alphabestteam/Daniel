@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<script>
+    const kmPerLiter = 10;
+const isSufficientFuel = (distance, kmPerLiter, fuelLeft) => {
+    if (distance / kmPerLiter <= fuelLeft) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+console.log(isSufficientFuel(30,kmPerLiter,10));
+</script>
+
+</body>
+</html>
