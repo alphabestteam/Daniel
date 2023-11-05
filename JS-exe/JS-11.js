@@ -16,7 +16,6 @@ console.log(square(5));
 const rectangle = (length,width) => length * width
 console.log(rectangle(5,2))
 //5
-
 function circleCalculate(radius) {
     const circumference = 2 * Math.PI * radius;
     const area = Math.PI * Math.pow(radius,2);
