@@ -39,19 +39,9 @@ const string = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
 let strArr = string.split(" ");
 
 
-const colors = [
-  "red",
-  "orange",
-  "yellow",
-  "greenyellow",
-  "lightblue",
-  "mediumpurple"
-];
 
-function randomColor() {
-  const randomIndex = Math.floor(Math.random() * colors.length);
-  return colors[randomIndex];
-}
+
+  
 
 const randomWordSection = document.getElementById("random-words");
 
@@ -68,6 +58,15 @@ strArr.forEach((word) => {
 
 ////////////////////////////14////////////////////////////////////////
 
+
+function randomColor() {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    const color = `rgb(${r}, ${g}, ${b}`; 
+    return color;
+  }
+  
 const changeColorButton = document.getElementById("change-color-button");
 
 changeColorButton.addEventListener("click", () => {
