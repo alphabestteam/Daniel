@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grade Checker</title>
+</head>
+<body>
+    <form id="gradeForm">
+        <label for="grade">Grade:</label>
+        <input type="text" id="grade" name="grade" required>
+        <input type="submit" value="Check Grade" onclick="myFunction(); return false;">
+    </form>
+    
+    <script>
+        myFunction = () => {
+            let char = ""; 
+            const comment = document.createElement("p");
+            const grade = document.getElementById("grade").value;
+            console.log(grade);
+
+            if (grade > 100 || grade < -50) {
+                alert("Invalid range. Enter again.");
+            } else if (grade == 100) {
+                char = 'A+';
+            } else if (grade >= 90) {
+                char = 'A';
+            } else if (grade >= 80) {
+                char = 'B';
+            } else if (grade >= 70) {
+                char = 'C';
+            } else if (grade >= 60) {
+                char = 'D';
+            } else if (grade >= 50) {
+                char = 'E';
+            } else if (grade >= -50) {
+                char = 'F';
+            }
+            
+            switch (char) {
+                case 'A+':
+                    comment.innerText = "Perfect!";
+                    break;
+                case 'A':
+                    comment.innerText = "Amazing!";
+                    break;
+                case 'B':
+                    comment.innerText = "Nicely done!";
+                    break;
+                case 'C':
+                    comment.innerText = "This is fine!";
+                    break;
+                case 'D':
+                    comment.innerText = "You can do better!";
+                    break;
+                case 'E':
+                    comment.innerText = "Moed B is an option!";
+                    break;
+                case 'F':
+                    comment.innerText = "Moed B is a must!";
+                    break;
+                default:
+                    break;
+            }
+            
+            document.body.appendChild(comment); 
+        }
+    </script>
+</body>
+</html>
