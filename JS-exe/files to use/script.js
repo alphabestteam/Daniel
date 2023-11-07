@@ -40,7 +40,6 @@ function questionE(){
     sequenceB();
     sequenceC();
 }
-
 // questionA();
 // questionB();
 // questionC();
