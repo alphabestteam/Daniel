@@ -4,16 +4,11 @@
 
 
 <script>
-    const kmPerLiter = 10;
-const isSufficientFuel = (distance, kmPerLiter, fuelLeft) => {
-    if (distance / kmPerLiter <= fuelLeft) {
-        return true;
-    } else {
-        return false;
-    }
-}
+const kmPerLiter = 10;
+const isSufficientFuel = (distance, kmPerLiter, fuelLeft) => (distance / kmPerLiter <= fuelLeft)
 
-console.log(isSufficientFuel(30,kmPerLiter,10));
+
+console.log(isSufficientFuel(30,kmPerLiter,2));
 </script>
 
 </body>
