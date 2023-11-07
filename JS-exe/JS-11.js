@@ -32,7 +32,6 @@ const countVowels = (text) => {
 }
 console.log(countVowels("tt")); 
 
-
 //7
 const arrayLengths = (arr1, arr2) => arr1.length==arr2.length
 console.log(arrayLengths([1,2],[2,3,2]));
