@@ -7,6 +7,7 @@ const characterMap = new Map([
   ["teacher", "Mrs. Puff"],
   ["location", "bikini bottom"],
 ]);
+
 //1
 console.log(characterMap);
 //2
