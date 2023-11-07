@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<script>
+  
+function findPatrick() {
+    alert("Hi bob, you friend patrick got lost! You need to fine him immediately!");
+    const search = confirm("Do you go to search for him?");
+    if (search==true){
+      alert("We start looking for patrick");
+      found();
+    }else{
+      alert("Ho, he will probably die. But don't worry you will find another friend.");
+    }
+}
+function found(){
+   const found = prompt("Did you find your friend?");
+    if(found=="yes"){
+      alert("Yay we found him!");
+    }else{
+      findPatrick();
+    }
+}
+findPatrick();
+
+
+
+</script>
+
+</body>
+</html>
