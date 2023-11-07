@@ -1,7 +1,7 @@
 // 1 - arr.at = check for array bounds automatically. but a bit slower.
 // arr[index] not check for bounds and can cause to error of exceptions out of the bounds
 
-//2
+2;
 // let getNumCreateArr = (num) =>{
 //     let arr = []
 //     for (let i = 0; i < num; i++) {
@@ -14,7 +14,7 @@
 //3
 // let deleteNfromArr = (arr, n) =>{
 //     arr.splice(arr.length-n, n);
-//     newArr = arr 
+//     newArr = arr
 //     console.log(newarr);
 // }
 // const newarr = ["Banana", "Orange", "Apple", "Mango"]
@@ -47,7 +47,7 @@
 //   return odd.toString().length == 2;
 // }
 // const nums = [32, 33, 16, 40,1,222];
-// const result = nums.filter(checkAdult);
+// const result = nums.filter(checkTwoDigits);
 // console.log(result);
 
 //8
@@ -56,7 +56,7 @@
 //         return true
 //     }return false
 // }
-// console.log(wordIncludes(["chen","david","mia"],"m"));
+// console.log(wordIncludes(["chen","david","mia"],"mia"));
 
 //9
 // let findNumber = (arr) => {
@@ -65,7 +65,8 @@
 // const arr = [1,2,3,4,10,35,10]
 // console.log(arr.find(findNumber));
 
-//10
+// //for this question, Q-9 need to be uncomment.
+// //10
 // let isExist = () =>{
 //     check = arr.find(findNumber)
 //     if (check){
@@ -75,15 +76,17 @@
 // console.log(isExist());
 
 //11
- // because sort works on string. which means that it sort in alphabet order. so in this case it will take the first character and it 
- // will check if it bigger than the other. for example 21 and 4, it will locate 21 before 4 because 2<4.
+// because sort works on string. which means that it sort in alphabet order. so in this case it will take the first character and it
+// will check if it bigger than the other. for example 21 and 4, it will locate 21 before 4 because 2<4.
 
- //12
+//12
 //  const numbers = [40, 100, 1, 5, 25, 10];
 //  let newNumbers = numbers.sort(function(a, b){return a - b});
-// console.log(newNumbers);    // i know that the function apply on the original array but for the next question i needed it inside variable
+//  console.log(newNumbers);
+// **i know that the function apply on the original array but for the next question i needed it inside variable
 // this function check whether number a -b will give negative output. if it does, it means b is bigger than a. and so on..
 
+//for this question Q-12 need to be uncomment.
 //13
 // let joinFunc = (numbers) =>{
 //     return numbers.join("**")
@@ -99,12 +102,11 @@
 // console.log(strSort(strArr));
 
 //15
-
 // let isAllBelow = (arr, threshold) => {
 //     return arr.every(value => value < threshold);
 //   }
-//   const numbers = [10, 15, 20, 25];
-//   console.log(isAllBelow(numbers, 20)); 
+//   const nums = [10, 15, 20, 25];
+//   console.log(isAllBelow(nums, 20));
 
 //16
 // function hasGreater(arr, number) {
@@ -112,5 +114,3 @@
 //   }
 //   const numbers = [10, 15, 20, 20];
 //   console.log(hasGreater(numbers, 20));
-  
-  
