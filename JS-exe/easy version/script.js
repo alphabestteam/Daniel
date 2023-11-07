@@ -53,21 +53,31 @@ function startGame() {
 }
 
 function checkInput() {
-    let quoteDisplay = document.getElementById('quote');
+    const quoteDisplay = document.getElementById('quote');
     const input = document.getElementById('input');
-    
+  
     input.addEventListener("keydown", function(event) {
       const keyPressed = event.key;
-      for (let i = 0; i < quoteDisplay.textContent.length; i++) {
-            if (keyPressed === quoteDisplay.textContent.charAt(i) ) {
-            console.log("V");
-            currentLetter = document.getElementsByClassName(`letter-${i}`)[0];
-            currentLetter.style.color = "green";
-
+      const inputIndex = input.selectionStart; 
+  
+      if (keyPressed === quoteDisplay.textContent.charAt(inputIndex)) {
+        const currentLetter = document.getElementsByClassName(`letter-${inputIndex}`)[0];
+        currentLetter.style.color = "green";
+      } else if(keyPressed !== 'Backspace'){
+        const currentLetter = document.getElementsByClassName(`letter-${inputIndex}`)[0];
+        currentLetter.style.color = "red";
       }
-     }
+      if (keyPressed === 'Backspace') {
+        for (let i = inputIndex; i < quoteDisplay.textContent.length; i++) {
+          const previousLetter = document.getElementsByClassName(`letter-${i}`)[0];
+          previousLetter.style.color = "white";
+        }
+      }
     });
   }
+
+  
+  
   
  // Call the function to set up the event listener
   
