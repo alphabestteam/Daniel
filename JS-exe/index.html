@@ -7,7 +7,7 @@
   
 function findPatrick() {
     alert("Hi bob, you friend patrick got lost! You need to fine him immediately!");
-    var search = confirm("Do you go to search for him?");
+    const search = confirm("Do you go to search for him?");
     if (search==true){
       alert("We start looking for patrick");
       found();
@@ -16,7 +16,7 @@ function findPatrick() {
     }
 }
 function found(){
-   var found = prompt("Did you find your friend?");
+   const found = prompt("Did you find your friend?");
     if(found=="yes"){
       alert("Yay we found him!");
     }else{
