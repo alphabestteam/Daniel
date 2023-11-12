@@ -25,14 +25,15 @@ const quotes = [
   "SpongeBob: I'm a Goofy Goober, yeah. You're a Goofy Goober, yeah. We're all Goofy Goobers, yeah. Goofy, goofy, goober, goober, yeah!",
   "SpongeBob: Once there was an ugly barnacle. He was so ugly that everyone died. The end.",
 ];
-
+const input = document.getElementById("input");
+const timeDisplay = document.getElementById("timer");
+const quoteDisplay = document.getElementById("quote");
+const result = document.getElementById("result");
 let intervalId;
-let timeDisplay = document.getElementById("timer");
 
 // in this function i choose random quote, then created span to each letter, and added it to the quoteDisplay object.
 function getRandomQuote() {
-  let quoteDisplay = document.getElementById("quote");
-  let currentQuote = quotes[Math.floor(Math.random() * quotes.length)];
+  const currentQuote = quotes[Math.floor(Math.random() * quotes.length)];
   let newContent = "";
   for (let i = 0; i < currentQuote.length; i++) {
     let uniqueClass = `letter-${i}`;
@@ -45,16 +46,19 @@ function getRandomQuote() {
 
 // Function to start the game
 function startGame() {
-  let startBtn = document.getElementById("start-btn");
-  startBtn.addEventListener("click", getRandomQuote);
+  const startBtn = document.getElementById("start-btn");
+  startBtn.addEventListener("click", () => {
+    getRandomQuote();
+    input.setAttribute("max", "quoteDisplay.length");
+    timeDisplay.style.display = "block";
+    result.innerHTML = "";
+    input.value = "";
+  });
   checkInput();
 }
 
 // Function to handle user input and typing accuracy
 function checkInput() {
-  const quoteDisplay = document.getElementById("quote");
-  const input = document.getElementById("input");
-
   input.addEventListener("keydown", function (event) {
     checkEndQuotes(input, quoteDisplay);
     const keyPressed = event.key;
@@ -88,7 +92,7 @@ function checkEndQuotes(input, quoteDisplay) {
   }
 }
 
-// Function to start the timer and display elapsed time
+// function to start the timer and display elapsed time
 function timeElapsedSinceButtonPress() {
   const startTime = new Date();
   intervalId = setInterval(function () {
@@ -106,22 +110,23 @@ function calculateWPM(numberOfWords, timeInSeconds) {
 
 // Function to end the game, display results, and calculate accuracy
 function endGame() {
-  let quoteDisplay = document.getElementById("quote");
-  const result = document.getElementById("result");
-  const input = document.getElementById("input");
   const totalWords = quoteDisplay.textContent.split(" ").length;
   const seconds = parseInt(timeDisplay.textContent);
   const typedText = input.value;
   const quoteText = quoteDisplay.textContent;
   const typingSpeed = calculateWPM(totalWords, seconds);
 
-  // Calculate accuracy. 
-  const correctCharacters = typedText.split("").filter((char, index) => char === quoteText[index]).length;
-  const accuracyPercentage = ((correctCharacters / quoteText.length) * 100).toFixed(2);
+  // Calculate accuracy.
+  const correctCharacters = typedText
+    .split("")
+    .filter((char, index) => char === quoteText[index]).length;
+  const accuracyPercentage = (
+    (correctCharacters / quoteText.length) *
+    100
+  ).toFixed(2);
 
   result.style.display = "block";
   result.innerHTML = `<p>Total Words Typed: ${totalWords}</p><p>Time Taken: ${seconds} seconds</p><p> WPM: ${typingSpeed}</p><p>Accuracy: ${accuracyPercentage}%</p>`;
-
   clearInterval(intervalId);
   timeDisplay.style.display = "none";
 }
