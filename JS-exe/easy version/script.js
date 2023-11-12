@@ -31,7 +31,7 @@ const quoteDisplay = document.getElementById("quote");
 const result = document.getElementById("result");
 let intervalId;
 
-// in this function i choose random quote, then created span to each letter, and added it to the quoteDisplay object.
+// A function that choose random quote, then created span to each letter, and added it to the quoteDisplay object.
 function getRandomQuote() {
   const currentQuote = quotes[Math.floor(Math.random() * quotes.length)];
   let newContent = "";
