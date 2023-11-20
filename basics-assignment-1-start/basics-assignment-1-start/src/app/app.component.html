@@ -1,7 +1,25 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <app-success-alert *ngIf="displayed"></app-success-alert>
+      <app-warning-alert *ngIf="!displayed"></app-warning-alert>
+      <button class="change-button" (click)="changeAlert()">Change Alert</button>
+      <br>
+      <label for="successCount">Number of Success Alerts:</label>
+      <mat-select id="successCount" [(ngModel)]="successCount">
+        <mat-option *ngFor="let option of options" [value]="option">{{option}}</mat-option>
+      </mat-select>
+
+      <app-success-alert *ngFor="let _ of getRange(successCount)"></app-success-alert>
+
+      <label for="warningCount">Number of Warning Alerts:</label>
+      <mat-select id="warningCount" [(ngModel)]="warningCount">
+        <mat-option *ngFor="let option of options" [value]="option">{{ option }}</mat-option>
+      </mat-select>
+      
+      <app-warning-alert *ngFor="let _ of getRange(warningCount)"></app-warning-alert>
+    </div>
+  </div>
+</div>
 
 
-
-<app-success-alert *ngIf="displayed"></app-success-alert>
-<app-warning-alert *ngIf="!displayed"></app-warning-alert>
-
-<button class="change-button" (click)="changeAlert()">Change Alert</button>
