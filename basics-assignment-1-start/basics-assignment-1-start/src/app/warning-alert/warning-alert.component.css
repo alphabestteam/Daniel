@@ -1,8 +1,11 @@
 .warning-div{
     background-color: black;
     margin: auto; 
-    width: fit-content;   
+    width: 90%;   
+    height:50px;   
 }
 .warning-div p{
+    padding-top:15px;
+    text-align: center;
     color: red;
 }
