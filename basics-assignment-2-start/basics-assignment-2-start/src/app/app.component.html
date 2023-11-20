@@ -1,0 +1,6 @@
+<div class="input-form">
+  <h4>User Name</h4>
+  <input class="input form-control shadow" type="text" id="username" [(ngModel)]="userName">
+  <p>User Name: {{ userName }}</p>
+  <button (click)="checkEmptyInput()" [disabled]="!userName" class="btn btn-primary">Clear input</button>
+</div>
