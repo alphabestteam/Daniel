@@ -1,0 +1,8 @@
+.success-div{
+    background-color: rgb(113, 151, 113);
+    margin: auto; 
+    width: fit-content;   
+}
+.success-div p{
+    color: rgb(236, 255, 62);
+}

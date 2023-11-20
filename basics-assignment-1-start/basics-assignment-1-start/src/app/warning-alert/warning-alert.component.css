@@ -1,0 +1,8 @@
+.warning-div{
+    background-color: black;
+    margin: auto; 
+    width: fit-content;   
+}
+.warning-div p{
+    color: red;
+}
