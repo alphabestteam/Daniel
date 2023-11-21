@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <ol>
+        <li>Add A button which says 'Display Details'</li>
+        <li>
+          Add a paragraph with any content of your choice (e.g. 'Secret Password
+          = tuna')
+        </li>
+        <li>
+          Log all button clicks in an array and output that array below the
+          secret paragraph (maybe log a timestamp or simply an incrementing
+          number)
+        </li>
+        <li>
+          Starting at the 5th log item, give all future log items a blue
+          background (via ngStyle) and white color (ngClass)
+        </li>
+
+        <button (click)="checkIsHidden()" class="btn btn-primary">
+          {{ textButton }}
+        </button>
+        <p *ngIf="isHidden">I hate Hen = True</p>
+        <p
+          *ngFor="let index of arr"
+          class="num-background"
+          [ngStyle]="{
+            'background-color': isBackgroundBlue(index) ? 'blue' : 'white',
+            color: isBackgroundBlue(index) ? 'white' : 'black'
+          }"
+        >
+          {{ index }}
+        </p>
+      </ol>
+    </div>
+  </div>
+</div>
