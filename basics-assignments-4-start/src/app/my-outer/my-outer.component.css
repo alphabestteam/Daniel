@@ -1,0 +1,26 @@
+.outer-container {
+    width: 60%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #1b1b1b; 
+    color: #d30d0d;
+    border:3px solid #d30d0d;    
+    border-radius: 5px;
+}
+h2{
+    color: white;
+}
+  
+  .outer-container div {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  .total {
+    font-size: 18px;
+    margin-top: 15px;
+  }
+  
