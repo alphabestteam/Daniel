@@ -1,0 +1,79 @@
+<form class="form" [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+  <div class="field">
+    <label class="label">userName</label>
+    <input
+      type="text"
+      class="input"
+      formControlName="userName"
+      [class.invalid]="
+        profileForm.get('userName')?.invalid &&
+        (profileForm.get('userName')?.touched ||
+          profileForm.get('userName')?.dirty)
+      "
+    />
+    <div
+      *ngIf="
+        profileForm.get('userName')?.invalid &&
+        (profileForm.get('userName')?.touched ||
+          profileForm.get('userName')?.dirty)
+      "
+      class="error-message"
+    >
+      User Name is required.
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label">email</label>
+    <input
+      type="email"
+      class="input"
+      formControlName="email"
+      [class.invalid]="
+        profileForm.get('email')?.invalid &&
+        (profileForm.get('email')?.touched || profileForm.get('email')?.dirty)
+      "
+    />
+    <div
+      *ngIf="
+        profileForm.get('email')?.invalid &&
+        (profileForm.get('email')?.touched || profileForm.get('email')?.dirty)
+      "
+      class="error-message"
+    >
+      Email is required and must be a valid email address.
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label">password</label>
+    <input
+      type="password"
+      class="input"
+      formControlName="password"
+      [class.invalid]="
+        profileForm.get('password')?.invalid &&
+        (profileForm.get('password')?.touched ||
+          profileForm.get('password')?.dirty)
+      "
+    />
+    <div
+      *ngIf="
+        profileForm.get('password')?.invalid &&
+        (profileForm.get('password')?.touched ||
+          profileForm.get('password')?.dirty)
+      "
+      class="error-message"
+    >
+      Password is required.
+    </div>
+  </div>
+
+  <div>
+    <button type="submit" class="button">Register</button>
+  </div>
+  <div *ngIf="profileForm.valid && formSubmitted">
+    <p>User name: {{ profileForm.get("userName")?.value }}</p>
+    <p>Email: {{ profileForm.get("email")?.value }}</p>
+  </div>
+</form>
