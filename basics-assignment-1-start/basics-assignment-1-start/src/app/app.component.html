@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+
+      <ng-container *ngIf="isWarningAlert; else warningAlert">
+        <app-success-alert></app-success-alert>
+      </ng-container>
+
+      <ng-template #warningAlert>
+        <app-warning-alert></app-warning-alert>
+      </ng-template>
+
+      <button class="change-button" (click)="changeAlert()">Change Alert</button>
+      <br>
+      <label>Number of  Alerts:</label>
+      <mat-select  [(ngModel)]="count">
+        <mat-option *ngFor="let option of options" [value]="option">{{option}}</mat-option>
+      </mat-select>
+
+      <ng-container *ngIf="isWarningAlert; else warningAlerts">
+        <app-success-alert *ngFor="let index of getRange(count)"></app-success-alert>
+      </ng-container>
+
+      <ng-template #warningAlerts>
+        <app-warning-alert *ngFor="let index of getRange(count)"></app-warning-alert>
+      </ng-template>
+
+    </div>
+  </div>
+</div>
