@@ -1,0 +1,9 @@
+1.
+    Docker's layer system speeds up development by efficiently managing and caching layers, 
+    allwing for faster incremental builds, reduced network usage, version control, and efficient separation of dependencies.
+2.
+    for better efficiency, in Docker its good to use couple of layers.
+    but in the other side, use one layer (in our case) may be better because it decrease the image size and 
+3.
+    docker history mysql shows all the statuses and layers
+    
