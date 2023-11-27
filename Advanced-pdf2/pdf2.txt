@@ -1,0 +1,34 @@
+1.
+    Because we dont always know how many parameters we will need. 
+    for example, if we have function for person with details and some detail are miss, the function still works even without the missing detail
+
+2.
+    the args* used for pass unspecific number of arguments to function
+    when we use it iniside function definition, we dont need to know how many parameters will pass to the function,
+    in print function on function, it will print all the parameters that we pass to the function
+
+3.
+    **kwargs allows you to pass keyword variable length of arguments to a function.This receive it as dictionary with keys and values.
+    so if we got through the **kwargs we will get print like dictionary.
+    
+4.  
+    the different between them as i mentioned before, the args get it as a tuple, and the **kwargs 
+    and yes, we can use them together just pass in the function the *args and the **kwargs
+5.
+     Packing - is just like we pack certain items into a box in the real world, In python we pack certain variables in a single iterable
+     Unpacking - is splitting the packed values into individual elements
+6.
+    for example packing in tuple -  num1=1
+                                    num2=2
+                                    num3=3
+                                    myTuple=(num1,num2,num3)
+    or we can pack it into list.
+
+    Unpacking - (a, b, c) = (1, 2, 3)
+     every variable will get one value from the tuple
+
+
+
+
+
+    
