@@ -1,0 +1,10 @@
+1.
+    after downloaded the tar file i used: 
+    docker load -i hello-world.tar
+    then  docker run hello-world
+2.
+    i also builded docker file and used 
+    docker build -t hello-world-app .
+    docker run hello-world-app
+
+    

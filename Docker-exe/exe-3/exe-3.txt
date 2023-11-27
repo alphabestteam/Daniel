@@ -1,0 +1,6 @@
+1.
+    docker run -d --name mysql-container -p 3306:3306 -e MYSQL_ALLOW_EMPTY_PASSWORD=yes -e MYSQL_DATABASE=daniel -e MYSQL_USER="%" -e MYSQL_PASSWORD="" mysql
+2.
+    docker stop mysql-container    
+3.  
+    docker rm mysql-container 

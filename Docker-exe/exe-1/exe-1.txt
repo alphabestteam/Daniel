@@ -1,0 +1,25 @@
+1.
+    Docker is an open source program, that allow to run applications in VM called container.
+    each container contain libraries and conf files. in this way we can run multiple apps without distribute other apps.
+    So, from handle thousand of servers for each program, we move to use multiple program on one machine and every one share the same kernel
+    which decreased the necessary 
+2.
+    Docker image, is like instruction file for the container. like a template that contain sequence of instruction for the container
+    this file it "read Only" which means we not working on it.
+    There is 3 ways to create image- 
+    1.Registry - pull from cloud - 
+    2. tar file - load from file
+    3. Dockerfile - self built base on parms
+
+3.
+    Containers are packages of software that contain all of the necessary elements to run in any environment.
+    it created from the Docker image.
+4.  
+    Docker image is read only file that contains everything needed to run app. 
+    Docker container is a running instance of Docker image including application and its environment
+    so, image its like template and the container is the runnable instance that created from the image
+5.  
+    Environment variables provide a flexible and organized way to configure and manage settings in applications.
+6.
+    Docker volume is a persistent and shareable storage mechanism that allows data to be stored outside a container's file system
+    

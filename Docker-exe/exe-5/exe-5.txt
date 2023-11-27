@@ -1,0 +1,4 @@
+1.
+    docker save -o mysql_image.tar mysql:latest // this created mysql_image.tar file
+2.
+    docker load -i mysql_image.tar

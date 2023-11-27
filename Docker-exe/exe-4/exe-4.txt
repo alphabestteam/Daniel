@@ -1,0 +1,8 @@
+1.
+    docker run -d --name mysql-container -p 3306:3306 -e MYSQL_ALLOW_EMPTY_PASSWORD=yes -e MYSQL_DATABASE=Daniel -e MYSQL_USER="%" -e MYSQL_PASSWORD="" -v C:\Users\danio\Desktop\dockervolume:/var/lib/mysql mysql
+2.
+    the data for the container, is stored in the defined folder that i added. include sql file and schemas and more.
+    docker stop mysql-container  
+3.
+    All the file stay the same but it added temp file and redo file.
+
