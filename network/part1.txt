@@ -1,0 +1,9 @@
+1. 
+switch is a networking device that directs data traffic 
+within a local area network  based on the MAC addresses of devices. 
+It solves problems like reducing network congestion, preventing collisions,
+enhancing security, and improving overall network performance by intelligently forwarding data to the right destination.
+2.
+A switch determines the physical interface (port) to send each packet by looking at the destination device's MAC address in the packet
+header and referencing a table that maps MAC addresses to ports.
+It then forwards the packet to the appropriate port, ensuring it reaches the correct destination.
