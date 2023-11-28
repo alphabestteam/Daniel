@@ -1,0 +1,17 @@
+services - under this keyword, we put the containers we want to build.
+    mongo - Container name
+    image - as it. the name
+    container-name - the container's name
+    env - used to define env variables. like we can define when we build container in terminal
+    ports - the ports connection
+    volume - define file and his path for storing the configuration from the container
+    
+2.
+    the ports wasn't defined.
+    i had to add ports on mongo express to 8081
+
+3.
+    docker-compose down
+4.
+    i created .env file which include the env variables
+    
