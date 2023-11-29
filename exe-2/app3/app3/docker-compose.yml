@@ -1,0 +1,27 @@
+version: "3.8"
+
+services:
+  mongo:
+    image: mongo
+    container_name: mongodb
+    ports:
+      - "27017:27017" 
+    networks:
+    - api
+
+  node-app:
+    build: .
+    container_name: jovial_b
+    ports:
+      - "3000:3000"  
+    
+    depends_on:
+      - mongo  
+    networks:
+      - api
+
+networks:
+  api:
+    driver: bridge
+
+
