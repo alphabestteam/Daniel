@@ -1,0 +1,13 @@
+
+1.
+    1.
+        one way, is to use yaml which i created. one deployment for the frontend under "name space" = first app. And one for backend
+        second way, is to use cli = kubectl create namespace my-app-namespace(create name space)--> kubectl apply -f frontend-deployment.yaml -n my-app-namespace(deploy the resources)
+
+    2.
+        kubectl apply -f frontend.yaml 
+        kubectl apply -f backend.yaml 
+
+        kubectl get deployments -n first-app
+        this commend show the deployments under the same name space 
+
