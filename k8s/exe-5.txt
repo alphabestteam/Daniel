@@ -1,0 +1,7 @@
+1.
+
+    kubectl scale deployment backend-deployment --replicas=5 -n first-app
+    kubectl scale deployment frontend-deployment --replicas=5 -n first-app
+2.
+    we would like to increase the pods when we have high traffic/load 
+    or to improved availability parallel processing
