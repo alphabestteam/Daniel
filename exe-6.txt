@@ -1,0 +1,12 @@
+NAME                                   CPU(cores)   MEMORY(bytes)   
+backend-deployment-f5c947c67-6vhzv     1m           8Mi
+backend-deployment-f5c947c67-7q54b     1m           2Mi
+backend-deployment-f5c947c67-md62x     1m           8Mi
+backend-deployment-f5c947c67-nf424     1m           2Mi
+backend-deployment-f5c947c67-zhqmx     1m           10Mi
+frontend-deployment-5974bc6997-9sxg6   1m           15Mi
+frontend-deployment-5974bc6997-s2gwd   1m           13Mi
+frontend-deployment-5974bc6997-tgf87   1m           10Mi
+
+
+i used kubectl top pods -n first-app
