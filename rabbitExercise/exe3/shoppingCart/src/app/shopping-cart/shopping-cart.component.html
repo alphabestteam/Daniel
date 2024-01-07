@@ -1,0 +1,19 @@
+<nav class="navbar">
+    <div class="logo"><h1>Shopping</h1></div>
+  </nav>
+  
+  <div class="wrapper">
+    <div class="items"> 
+      <div class="item" *ngFor="let item of storedList">
+        {{ item }}
+        <button class="btn-add" (click)="addToCart(item)">Add to Cart</button>
+      </div>
+    </div>
+</div>
+<div class="summary-wrapper">
+    <button class="btn-payment" (click)="processToPayment()">Process to payment</button>
+    <div class="summary" *ngIf="showShoppingLIst">
+        <div><h1>Your shopping list: </h1></div>
+        <div *ngFor="let item of shoppingList">{{ item }}</div>
+    </div>
+</div>
