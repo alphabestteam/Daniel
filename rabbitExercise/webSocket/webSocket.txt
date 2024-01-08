@@ -1,0 +1,17 @@
+1.
+    An method to create open two way interactive communication session 
+2.
+    WebSockets require less bandwidth and provide lower latency compared to HTTP, reducing the load on both the client and the server
+3.
+    websocket can store multiple type of data. like text,binary data(audio,video..),json and more
+4.
+    firewall restrictions, connection termination challenges, statelessness, security concerns, limited browser support in certain environments,
+    proxy server interference, and the complexity of implementation
+5.
+    WebSocket uses a handshake process to initiate the connection, and once established, it enables efficient, low-latency communication
+    Websocket use TCP connection.
+6.
+    It is a secure version of WebSocket that operates over a secure TLS/SSL connection
+
+    The main difference between WebSocket and WSS lies in the level of security.
+    WebSocket operates over a plain, unencrypted connection, while WSS ensures a secure, encrypted communication channel.
