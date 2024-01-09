@@ -1,0 +1,16 @@
+
+1.
+    redis is a noSql DB. can be used as a database, cache and message broker
+2.
+    Fast Data Access. stores data entirely in memory. which means it can provide really fast response time.
+3.
+    string, lists, sets, hashes, streams and more..
+4.
+    Redis is an in-memory store: all your data must fit in memory
+    There is no query language (only commands) and no support for a relational algebra.
+    Challenges in implementing complex transactions with multiple commands.
+    Data structure limitations compared to some NoSQL databases.
+
+
+
+
